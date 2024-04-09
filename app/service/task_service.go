@@ -1,3 +1,4 @@
+//go:generate mockery --name=TaskService --output=../../mocks
 package service
 
 import (
@@ -70,7 +71,7 @@ func (t TaskServiceImpl) UpdateTask(c *gin.Context) {
 	var request dto.TaskRequest
 	if err := c.ShouldBindJSON(&request); err != nil {
 		log.Error("Invalid create params", err)
-		pkg.PanicException(constant.DataNotFound)
+		pkg.PanicException(constant.InvalidRequest)
 	}
 
 	taskName := request.Name

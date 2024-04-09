@@ -1,0 +1,3 @@
+gen_mocks:
+	rm -rf mocks
+	go generate ./...
