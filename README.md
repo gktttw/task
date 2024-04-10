@@ -36,3 +36,14 @@ curl --location --request PUT 'localhost:8080/tasks/1' \
 # delete task
 curl --location --request DELETE 'localhost:8080/tasks/1'
 ```
+
+# write unit test
+mockery can mock interfaces for you
+write `go:generate` tags and `make gen_mock`
+
+execute unit test
+```
+go test ./... -coverprofile=cover.out
+go tool cover -html=cover.out 
+```
+
