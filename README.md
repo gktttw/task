@@ -26,7 +26,7 @@ curl --location 'localhost:3000/tasks' \
 curl --location 'localhost:3000/tasks'
 
 # update task
-curl --location --request PUT 'localhost:8080/tasks/1' \
+curl --location --request PUT 'localhost:3000/tasks/1' \
 --header 'Content-Type: application/json' \
 --data '{
     "name": "999",
@@ -34,7 +34,7 @@ curl --location --request PUT 'localhost:8080/tasks/1' \
 }'
 
 # delete task
-curl --location --request DELETE 'localhost:8080/tasks/1'
+curl --location --request DELETE 'localhost:3000/tasks/1'
 ```
 
 # write unit test
